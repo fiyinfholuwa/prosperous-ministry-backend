@@ -150,102 +150,78 @@
             <h2 class="text-center section-title mb-5">Latest from Our Autris Insights</h2>
 
             <!-- Search Bar and Categories -->
-            <div class="mb-4 d-flex justify-content-between">
-                <input type="text" class="form-control search-bar" placeholder="Search Blog Posts..." aria-label="Search Blog">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categories
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
-                        <li><a class="dropdown-item" href="#">Senior Care Tips</a></li>
-                        <li><a class="dropdown-item" href="#">Rehabilitation</a></li>
-                        <li><a class="dropdown-item" href="#">Home Care Advice</a></li>
-                        <li><a class="dropdown-item" href="#">Nutrition</a></li>
-                    </ul>
+
+            <form class="mb-4" action="/search" method="GET">
+                <div class="row g-2">
+                    <!-- Search Input -->
+                    <div class="col-12 col-md-6">
+                        <input type="text" name="query" class="form-control search-bar" placeholder="Search Blog Posts..." aria-label="Search Blog">
+                    </div>
+
+                    <!-- Category Select -->
+                    <div class="col-12 col-md-4">
+                        <select name="category" class="form-control">
+                            <option value="" disabled selected>Categories</option>
+                            <option value="senior-care-tips">Senior Care Tips</option>
+                            <option value="rehabilitation">Rehabilitation</option>
+                            <option value="home-care-advice">Home Care Advice</option>
+                            <option value="nutrition">Nutrition</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="col-12 col-md-2">
+                        <button type="submit" class="btn btn-primary w-100">Search</button>
+                    </div>
                 </div>
-            </div>
+            </form>
 
             <!-- Blog Post Listings -->
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card blog-card mb-4">
-                        <div class="card-img-wrapper">
-                            <img src="https://media.istockphoto.com/id/1125084447/photo/scientific-analysis-of-alzheimers-disease-in-hospital-conceptual-image.webp?a=1&b=1&s=612x612&w=0&k=20&c=faR1petnGpvj5JS_BLGwEiLEaDMJg7MKCZ4zbY-io8I=" class="card-img-top" alt="Blog Post Image">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Understanding Alzheimer’s: A Comprehensive Guide</h5>
-                            <p class="card-text">An in-depth look at Alzheimer's, its symptoms, and caregiving strategies.</p>
-                            <a href="#" class="btn btn-link read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card blog-card mb-4">
-                        <div class="card-img-wrapper">
-                            <img src="https://plus.unsplash.com/premium_photo-1661695467787-48039a1229a7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fEhvbWUlMjBzYWZldHklMjB0aXBzfGVufDB8fDB8fHww" class="card-img-top" alt="Blog Post Image">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Home Safety Tips for Seniors</h5>
-                            <p class="card-text">Ensure a safe living environment for seniors with these practical tips.</p>
-                            <a href="#" class="btn btn-link read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card blog-card mb-4">
-                        <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8TWVudGFsJTIwSGVhbHRofGVufDB8fDB8fHww" class="card-img-top" alt="Blog Post Image">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Mental Health Resources for Seniors</h5>
-                            <p class="card-text">Explore important mental health resources and support for seniors.</p>
-                            <a href="#" class="btn btn-link read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+            @if(count($latest_blog) > 0)
+                <div class="row">
+                    @foreach($latest_blog as $blog)
+                        <div class="col-md-4">
+                            <div class="card blog-card mb-4">
+                                <div class="card-img-wrapper">
+                                    <img src="{{asset($blog->image)}}" class="card-img-top" alt="Blog Post Image">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$blog->title}}</h5>
+                                    <p class="card-text">{!! (\Illuminate\Support\Str::limit($blog->body, 40, '...')) !!}</p>
+                                    <a href="{{route('insights.detail', $blog->slug)}}" class="btn btn-link read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    @endforeach
+
+                </div>
+
+            @endif
             <!-- Popular Posts Section -->
             <h3 class="text-center section-title mb-4">SPOTLIGHT</h3>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card blog-card mb-4">
-                        <div class="card-img-wrapper">
-                            <img src="https://media.istockphoto.com/id/1125084447/photo/scientific-analysis-of-alzheimers-disease-in-hospital-conceptual-image.webp?a=1&b=1&s=612x612&w=0&k=20&c=faR1petnGpvj5JS_BLGwEiLEaDMJg7MKCZ4zbY-io8I=" class="card-img-top" alt="Blog Post Image">
+            @if(count($spot_light) >0)
+                <div class="row">
+                    @foreach($spot_light as $blog)
+                        <div class="col-md-4">
+                            <div class="card blog-card mb-4">
+                                <div class="card-img-wrapper">
+                                    <img src="{{asset($blog->image)}}" class="card-img-top" alt="Blog Post Image">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$blog->title}}</h5>
+                                    <p class="card-text">{!! (\Illuminate\Support\Str::limit($blog->body, 40, '...')) !!}</p>
+                                    <a href="{{route('insights.detail', $blog->slug)}}" class="btn btn-link read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Understanding Alzheimer’s: A Comprehensive Guide</h5>
-                            <p class="card-text">An in-depth look at Alzheimer's, its symptoms, and caregiving strategies.</p>
-                            <a href="#" class="btn btn-link read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card blog-card mb-4">
-                        <div class="card-img-wrapper">
-                            <img src="https://plus.unsplash.com/premium_photo-1661695467787-48039a1229a7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fEhvbWUlMjBzYWZldHklMjB0aXBzfGVufDB8fDB8fHww" class="card-img-top" alt="Blog Post Image">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Home Safety Tips for Seniors</h5>
-                            <p class="card-text">Ensure a safe living environment for seniors with these practical tips.</p>
-                            <a href="#" class="btn btn-link read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card blog-card mb-4">
-                        <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8TWVudGFsJTIwSGVhbHRofGVufDB8fDB8fHww" class="card-img-top" alt="Blog Post Image">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Mental Health Resources for Seniors</h5>
-                            <p class="card-text">Explore important mental health resources and support for seniors.</p>
-                            <a href="#" class="btn btn-link read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+                    @endforeach
+
+                </div>
+
+            @endif
             <!-- Comment Section -->
 {{--            <h3 class="text-center section-title mb-4">Leave a Comment</h3>--}}
 {{--            <div class="comment-section mt-4">--}}

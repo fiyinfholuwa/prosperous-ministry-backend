@@ -26,7 +26,7 @@
                     </th>
                     <th>Image</th>
                     <th>Link</th>
-                    <th>Country</th>
+                    <th>Content</th>
                     <th>Action</th>
                   </tr>
                 </thead>

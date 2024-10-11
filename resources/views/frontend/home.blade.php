@@ -90,28 +90,28 @@
     </section>
 
     <!-- Client Testimonials -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center section-title">What Our Clients Say</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="testimonial">
-                        <p>"AUTRIS Healthcare has been a blessing for our family. Their compassionate care has made a world of difference for my mother."</p>
-                        <footer class="blockquote-footer mt-3">John D., <cite title="Source">West Orange</footer>
-                    </div>
+    @if(count($testimonials) > 0)
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center section-title">What Our Clients Say</h2>
+                <div class="row">
+                    @foreach($testimonials as $test)
+                        <div class="col-md-6">
+                            <div class="testimonial">
+                                <p>{{$test->body}}</p>
+                                <footer class="blockquote-footer mt-3">{{$test->full_name}}</footer>
+                            </div>
+                        </div>
+
+                    @endforeach
                 </div>
-                <div class="col-md-6">
-                    <div class="testimonial">
-                        <p>"The staff at AUTRIS are true professionals. They've provided excellent care and support for my father's recovery."</p>
-                        <footer class="blockquote-footer mt-3">Sarah M., <cite title="Source">Westfield</footer>
-                    </div>
+                <div class="text-center mt-5">
+                    <a href="{{route('testimonials')}}" class="btn btn-primary">Read More Testimonials</a>
                 </div>
             </div>
-            <div class="text-center mt-5">
-                <a href="{{route('testimonials')}}" class="btn btn-primary">Read More Testimonials</a>
-            </div>
-        </div>
-    </section>
+        </section>
+
+    @endif
 
     <!-- Book a Consultation -->
     <section class="py-5 cta-section">
@@ -124,62 +124,39 @@
         </div>
     </section>
 
+    @if(count($blogs) > 0 )
+        <section class="py-5 bg-light blog-preview-section">
+            <div class="container">
+                <h4 class="text-center section-title mb-5">Latest from Autris Insights</h4>
+                <div class="row">
+                    @foreach($blogs as $blog)
+                        <div class="col-md-4">
+                            <div class="card blog-card mb-4">
+                                <div class="card-img-wrapper">
+                                    <img src="{{asset($blog->image)}}" class="card-img-top" alt="Blog Post Image">
+                                    <div class="card-img-overlay d-flex align-items-start justify-content-end">
+                                        <span class="badge badge-category bg-primary">{{optional($blog->category_info)->name}}</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$blog->title}}</h5>
+                                    <p class="card-text">{!! (\Illuminate\Support\Str::limit($blog->body, 40, '...')) !!}</p>
+                                    <a href="{{route('insights.detail', $blog->slug)}}" class="btn btn-link text-primary p-0 read-more">Read More <i class="fas fa-arrow-right ml-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    @endforeach
+
+                </div>
+                <div class="text-center mt-5">
+                    <a href="{{route('insights')}}" class="btn btn-primary btn-lg">Visit Autris Insights</a>
+                </div>
+            </div>
+        </section>
+
+    @endif
     <!-- Blog Preview Section -->
-    <section class="py-5 bg-light blog-preview-section">
-        <div class="container">
-            <h4 class="text-center section-title mb-5">Latest from Autris Insights</h4>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card blog-card mb-4">
-                        <div class="card-img-wrapper">
-                            <img src="{{asset('frontend/images/blog1.avif')}}" class="card-img-top" alt="Blog Post Image">
-                            <div class="card-img-overlay d-flex align-items-start justify-content-end">
-                                <span class="badge badge-category bg-primary">Healthcare Tips</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Tips for Caring for Seniors with Dementia</h5>
-                            <p class="card-text">Learn effective strategies for providing care and support to seniors living with dementia.</p>
-                            <a href="#" class="btn btn-link text-primary p-0 read-more">Read More <i class="fas fa-arrow-right ml-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card blog-card mb-4">
-                        <div class="card-img-wrapper">
-                            <img src="{{asset('frontend/images/blog1.avif')}}" class="card-img-top" alt="Blog Post Image">
-                            <div class="card-img-overlay d-flex align-items-start justify-content-end">
-                                <span class="badge badge-category bg-primary">Recovery</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">The Benefits of Home Care for Stroke Recovery</h5>
-                            <p class="card-text">Discover how home care services can enhance recovery and quality of life for stroke survivors.</p>
-                            <a href="#" class="btn btn-link text-primary p-0 read-more">Read More <i class="fas fa-arrow-right ml-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card blog-card mb-4">
-                        <div class="card-img-wrapper">
-                            <img src="{{asset('frontend/images/blog1.avif')}}" class="card-img-top" alt="Blog Post Image">
-                            <div class="card-img-overlay d-flex align-items-start justify-content-end">
-                                <span class="badge badge-category bg-primary">Nutrition</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Nutrition Tips for Seniors: Eating Well at Home</h5>
-                            <p class="card-text">Explore practical advice for maintaining a healthy diet for seniors receiving home care.</p>
-                            <a href="#" class="btn btn-link text-primary p-0 read-more">Read More <i class="fas fa-arrow-right ml-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                <a href="{{route('insights')}}" class="btn btn-primary btn-lg">Visit Autris Insights</a>
-            </div>
-        </div>
-    </section>
 
     <!-- Join Us Section (before the footer) -->
     <section class="join-us">

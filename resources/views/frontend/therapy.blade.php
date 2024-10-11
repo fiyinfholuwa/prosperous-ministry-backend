@@ -183,38 +183,65 @@
 
     <section class="service-header">
         <div class="container text-center">
-            <h2>Personal Care Assistance</h2>
-            <p>Delivering compassionate care tailored to individual needs with excellence and dedication.</p>
+            <h2>Rehabilitation Therapy</h2>
+            <p>Specialized support and care to help individuals regain independence and improve their quality of life after surgery, injury, or illness.</p>
         </div>
     </section>
 
     <!-- Service Overview Content -->
     <section class="container content-section">
-        <h3 class="section-title">Service Overview</h3>
+        <h3 class="section-title">Comprehensive Rehabilitation Therapy Services</h3>
         <p>
-            Our Personal Care Assistance (PCA) service is designed to provide personalized care to those who need help with daily activities. Whether it's help with dressing, meal preparation, or companionship, we ensure that you or your loved ones receive the highest level of care.
+            Our Rehabilitation Therapy services encompass a variety of therapies aimed at enhancing physical, occupational, and speech abilities. Key services include:
+        </p>
+        <ul>
+            <li><strong>Physical Therapy:</strong> Licensed physical therapists work with clients to improve mobility, strength, and balance through individualized exercise programs designed for recovery from injuries or surgeries.</li>
+            <li><strong>Occupational Therapy:</strong> Our occupational therapists help clients regain skills needed for daily living and work activities, offering strategies and adaptive techniques for personal care, household tasks, and community participation.</li>
+            <li><strong>Speech Therapy:</strong> For clients with communication or swallowing difficulties, speech therapists provide specialized assessments and interventions to improve speech clarity, language skills, and safe swallowing techniques.</li>
+            <li><strong>Pain Management:</strong> Various techniques are employed by our rehabilitation team to manage and alleviate pain, including therapeutic exercises, manual therapy, and education on pain management strategies.</li>
+            <li><strong>Fall Prevention and Safety Training:</strong> Our therapists provide fall risk assessments and personalized strategies to minimize hazards, educating clients on safe movement techniques and the use of assistive devices.</li>
+        </ul>
+    </section>
+
+    <!-- Personalized Therapy Plans -->
+    <section class="container content-section">
+        <h3 class="section-title">Personalized Therapy Plans</h3>
+        <p>
+            At Austris Healthcare, we believe that effective rehabilitation begins with a thorough assessment. Our team conducts comprehensive evaluations to identify individual needs, challenges, and goals. Based on these assessments, we create personalized therapy plans that guide clients through their recovery journey.
         </p>
     </section>
 
-    <!-- How It Works -->
+    <!-- Highly Skilled Therapy Team -->
     <section class="container content-section">
-        <h3 class="section-title">How It Works</h3>
-        <ul>
-            <li><strong>Initial Consultation:</strong> Our team assesses your unique needs and develops a customized care plan.</li>
-            <li><strong>Care Plan Development:</strong> A detailed plan is created to meet your goals and ensure quality care.</li>
-            <li><strong>Ongoing Support:</strong> Continuous monitoring and adjustments are made to ensure the best care experience.</li>
-        </ul>
+        <h3 class="section-title">Highly Skilled Therapy Team</h3>
+        <p>
+            Our Rehabilitation Therapy team consists of experienced and licensed therapists who are passionate about helping clients achieve their goals. Each therapist is committed to ongoing professional development, ensuring they remain current with best practices and evidence-based techniques.
+        </p>
     </section>
 
-    <!-- Benefits of the Service -->
+    <!-- Flexible Care Options -->
     <section class="container content-section">
-        <h3 class="section-title">Benefits of Our PCA Service</h3>
-        <ul>
-            <li>Highly personalized care tailored to individual needs.</li>
-            <li>Experienced caregivers ensuring compassionate service.</li>
-            <li>Improved quality of life and increased independence.</li>
-            <li>Comprehensive support for both clients and families.</li>
-        </ul>
+        <h3 class="section-title">Flexible Care Options</h3>
+        <p>
+            We recognize that every client’s journey to recovery is unique. That’s why we offer flexible therapy options that can be delivered in-home or at outpatient facilities, depending on the client’s preference and needs. We work closely with clients to create a schedule that fits their lifestyle and recovery timeline.
+        </p>
+    </section>
+
+    <!-- Commitment to Quality Care -->
+    <section class="container content-section">
+        <h3 class="section-title">Commitment to Quality Care</h3>
+        <p>
+            At Austris Healthcare, we prioritize the health and well-being of our clients. We adhere to the highest standards of care and regularly evaluate our rehabilitation programs to ensure they are effective and aligned with clients’ goals. Client satisfaction and safety are at the forefront of everything we do.
+        </p>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="container content-section text-center">
+        <h3 class="section-title">Start Your Recovery Journey with Austris Healthcare</h3>
+        <p>
+            If you or a loved one are in need of rehabilitation therapy services, Austris Healthcare is here to provide the support you need. Our compassionate and skilled therapists are dedicated to helping you regain your independence and enhance your quality of life.
+            <strong>Contact us today</strong> to learn more about our Rehabilitation Therapy services and how we can assist you on your path to recovery.
+        </p>
     </section>
 
 

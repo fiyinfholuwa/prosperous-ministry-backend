@@ -183,38 +183,66 @@
 
     <section class="service-header">
         <div class="container text-center">
-            <h2>Personal Care Assistance</h2>
-            <p>Delivering compassionate care tailored to individual needs with excellence and dedication.</p>
+            <h2>Live-In Care</h2>
+            <p>Comprehensive around-the-clock support from compassionate caregivers, ensuring comfort and independence at home.</p>
         </div>
     </section>
 
     <!-- Service Overview Content -->
     <section class="container content-section">
-        <h3 class="section-title">Service Overview</h3>
+        <h3 class="section-title">Comprehensive Live-In Care Services</h3>
         <p>
-            Our Personal Care Assistance (PCA) service is designed to provide personalized care to those who need help with daily activities. Whether it's help with dressing, meal preparation, or companionship, we ensure that you or your loved ones receive the highest level of care.
+            Our Live-In Care services are designed to cater to a wide range of needs, ensuring that each client receives personalized attention and support. Key services include:
+        </p>
+        <ul>
+            <li><strong>24/7 Personal Assistance:</strong> Caregivers are available around the clock to assist with daily activities such as bathing, dressing, grooming, and toileting.</li>
+            <li><strong>Medication Management:</strong> Caregivers provide medication reminders and assist with administration, ensuring adherence to prescribed treatment plans.</li>
+            <li><strong>Meal Preparation:</strong> Nutritious meals are prepared based on clients’ dietary preferences and restrictions, promoting a healthy lifestyle.</li>
+            <li><strong>Companionship:</strong> Caregivers offer companionship and engage clients in conversations and activities to foster a supportive environment.</li>
+            <li><strong>Mobility Support:</strong> Assistance with walking, transferring, and moving around the home while prioritizing safety and independence.</li>
+            <li><strong>Household Support:</strong> Light housekeeping duties, laundry, and grocery shopping are included to maintain a clean and organized living space.</li>
+        </ul>
+    </section>
+
+    <!-- Personalized Care Plans -->
+    <section class="container content-section">
+        <h3 class="section-title">Personalized Care Plans</h3>
+        <p>
+            At Austris Healthcare, we believe in a tailored approach to care. Each client receives a personalized care plan developed in collaboration with their family and healthcare team. This plan addresses specific needs, preferences, and goals, ensuring that our services align with each client’s lifestyle.
         </p>
     </section>
 
-    <!-- How It Works -->
+    <!-- Highly Trained Caregivers -->
     <section class="container content-section">
-        <h3 class="section-title">How It Works</h3>
-        <ul>
-            <li><strong>Initial Consultation:</strong> Our team assesses your unique needs and develops a customized care plan.</li>
-            <li><strong>Care Plan Development:</strong> A detailed plan is created to meet your goals and ensure quality care.</li>
-            <li><strong>Ongoing Support:</strong> Continuous monitoring and adjustments are made to ensure the best care experience.</li>
-        </ul>
+        <h3 class="section-title">Highly Trained Caregivers</h3>
+        <p>
+            Our Live-In Care team consists of highly trained and experienced caregivers who are passionate about providing compassionate support. We conduct thorough background checks and ongoing training to ensure that our caregivers are equipped with the skills necessary to meet our clients' diverse needs.
+        </p>
     </section>
 
-    <!-- Benefits of the Service -->
+    <!-- Flexibility and Comfort -->
     <section class="container content-section">
-        <h3 class="section-title">Benefits of Our PCA Service</h3>
-        <ul>
-            <li>Highly personalized care tailored to individual needs.</li>
-            <li>Experienced caregivers ensuring compassionate service.</li>
-            <li>Improved quality of life and increased independence.</li>
-            <li>Comprehensive support for both clients and families.</li>
-        </ul>
+        <h3 class="section-title">Flexibility and Comfort</h3>
+        <p>
+            Choosing Live-In Care means clients can receive support in the familiar surroundings of their own homes. This not only enhances comfort but also promotes a sense of security. Our flexible care options allow us to adjust services as needs change, ensuring ongoing support throughout various stages of life.
+        </p>
+    </section>
+
+    <!-- Commitment to Quality Care -->
+    <section class="container content-section">
+        <h3 class="section-title">Commitment to Quality Care</h3>
+        <p>
+            At Austris Healthcare, we are dedicated to maintaining the highest standards of care. We regularly monitor and evaluate our services to ensure they meet the needs of our clients. Your feedback is invaluable, and we encourage open communication to continually improve our services.
+        </p>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="container content-section text-center">
+        <h3 class="section-title">Start Your Journey with Austris Healthcare</h3>
+        <p>
+            If you or a loved one require live-in support, Austris Healthcare is here to help. Our compassionate team is committed to enhancing your quality of life and providing the necessary assistance to live independently and comfortably.
+            <strong>Contact us today</strong> to learn more about our Live-In Care services and how we can tailor our support to meet your needs.
+        </p>
     </section>
 
 

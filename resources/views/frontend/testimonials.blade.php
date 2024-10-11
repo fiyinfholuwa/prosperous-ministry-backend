@@ -68,57 +68,54 @@
             <h2 class="text-center section-title mb-5">Client Testimonials</h2>
 
             <!-- Client Stories -->
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <div class="testimonial-card mb-4">
-                        <div class="card-body">
-                            <h5 class="client-name">Jane Doe</h5>
-                            <p class="testimonial-text">"AUTRIS Healthcare provided exceptional support for my mother during her recovery. The team was compassionate and attentive, making the process so much easier for our family."</p>
-                        </div>
-                        <div class="video-wrapper">
-                            <video controls class="testimonial-video">
-                                <source src="/videos/testimonial1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card mb-4">
-                        <div class="card-body">
-                            <h5 class="client-name">John Smith</h5>
-                            <p class="testimonial-text">"I cannot thank AUTRIS enough for their outstanding service. They truly cared for my father as if he were their own. Highly recommend!"</p>
-                        </div>
-                        <div class="video-wrapper">
-                            <video controls class="testimonial-video">
-                                <source src="/videos/testimonial2.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="row mb-4">--}}
+{{--                <div class="col-md-6">--}}
+{{--                    <div class="testimonial-card mb-4">--}}
+{{--                        <div class="card-body">--}}
+{{--                            <h5 class="client-name">Jane Doe</h5>--}}
+{{--                            <p class="testimonial-text">"AUTRIS Healthcare provided exceptional support for my mother during her recovery. The team was compassionate and attentive, making the process so much easier for our family."</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="video-wrapper">--}}
+{{--                            <video controls class="testimonial-video">--}}
+{{--                                <source src="/videos/testimonial1.mp4" type="video/mp4">--}}
+{{--                                Your browser does not support the video tag.--}}
+{{--                            </video>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-6">--}}
+{{--                    <div class="testimonial-card mb-4">--}}
+{{--                        <div class="card-body">--}}
+{{--                            <h5 class="client-name">John Smith</h5>--}}
+{{--                            <p class="testimonial-text">"I cannot thank AUTRIS enough for their outstanding service. They truly cared for my father as if he were their own. Highly recommend!"</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="video-wrapper">--}}
+{{--                            <video controls class="testimonial-video">--}}
+{{--                                <source src="/videos/testimonial2.mp4" type="video/mp4">--}}
+{{--                                Your browser does not support the video tag.--}}
+{{--                            </video>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
             <!-- Referral Partner Testimonials -->
-            <h3 class="text-center section-title mb-4">Referral Partner Testimonials</h3>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="testimonial-card mb-4">
-                        <div class="card-body">
-                            <h5 class="partner-name">Dr. Emily Johnson</h5>
-                            <p class="testimonial-text">"I refer my patients to AUTRIS because I trust them to provide top-notch care. They truly prioritize the well-being of their clients."</p>
+{{--            <h3 class="text-center section-title mb-4">Referral Partner Testimonials</h3>--}}
+            @if(count($testimonials) > 0)
+                <div class="row">
+                    @foreach($testimonials as $test)
+                        <div class="col-md-6 mt-3">
+                            <div class="testimonial">
+                                <p>{{$test->body}}</p>
+                                <footer class="blockquote-footer mt-3">{{$test->full_name}}</footer>
+                            </div>
                         </div>
-                    </div>
+
+                    @endforeach
+
                 </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card mb-4">
-                        <div class="card-body">
-                            <h5 class="partner-name">Elder Care Attorney, Mark Lee</h5>
-                            <p class="testimonial-text">"AUTRIS has been an invaluable resource for my clients. Their commitment to quality care is evident in everything they do."</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            @endif
 
             <!-- Submit Your Story CTA -->
             <div class="text-center mt-5">

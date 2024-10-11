@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Booking;
 use App\Models\Contact;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function home(){
-        return view('frontend.home');
+        $blogs = Blog::paginate(3);
+        $testimonials = Testimonial::paginate(2);
+        return view('frontend.home', compact('blogs', 'testimonials'));
     }
     public function about(){
         return view('frontend.about');
@@ -18,11 +22,18 @@ class FrontendController extends Controller
         return view('frontend.services');
     }
     public function insights(){
-        return view('frontend.insights');
+        $latest_blog = Blog::latest()->paginate(3);
+        $spot_light = Blog::paginate(6);
+        return view('frontend.insights', compact('latest_blog', 'spot_light'));
+    }
+    public function insights_detail($slug){
+        $blog = Blog::where('slug', '=', $slug)->first();
+        return view('frontend.insights_detail', compact('blog'));
     }
 
     public function testimonials(){
-        return view('frontend.testimonials');
+        $testimonials = Testimonial::latest()->get();
+        return view('frontend.testimonials', compact('testimonials'));
     }
     public function resources(){
         return view('frontend.resources');
