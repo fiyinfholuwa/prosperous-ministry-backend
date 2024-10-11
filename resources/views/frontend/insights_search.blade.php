@@ -147,18 +147,14 @@
     </style>
     <section class="py-5 blog-preview-section">
         <div class="container">
-            <h2 class="text-center section-title mb-5">Latest from Our Autris Insights</h2>
-
-            <!-- Search Bar and Categories -->
+            <h2 class="text-center section-title mb-5">Search <span style="color: red;">{{$searchQuery}}</span></h2>
 
             <form class="mb-4" action="{{route('insights.search')}}" method="GET">
                 <div class="row g-2">
-                    <!-- Search Input -->
                     <div class="col-12 col-md-6">
                         <input type="text" name="query" class="form-control search-bar" placeholder="Search Blog Posts..." aria-label="Search Blog">
                     </div>
 
-                    <!-- Category Select -->
                     <div class="col-12 col-md-4">
                         <select name="category" class="form-control">
                             <option value="" disabled selected>Categories</option>
@@ -169,7 +165,6 @@
                         </select>
                     </div>
 
-                    <!-- Submit Button -->
                     <div class="col-12 col-md-2">
                         <button type="submit" class="btn btn-primary w-100">Search</button>
                     </div>
@@ -178,9 +173,9 @@
 
             <!-- Blog Post Listings -->
 
-            @if(count($latest_blog) > 0)
+            @if(count($blogs) > 0)
                 <div class="row">
-                    @foreach($latest_blog as $blog)
+                    @foreach($blogs as $blog)
                         <div class="col-md-4">
                             <div class="card blog-card mb-4">
                                 <div class="card-img-wrapper">
@@ -197,56 +192,12 @@
                             </div>
                         </div>
                     @endforeach
-
                 </div>
-
+            @else
+                <h3 style="color: red;">No Results Found</h3>
             @endif
             <!-- Popular Posts Section -->
-            <h3 class="text-center section-title mb-4">SPOTLIGHT</h3>
-            @if(count($spot_light) >0)
-                <div class="row">
-                    @foreach($spot_light as $blog)
-                        <div class="col-md-4">
-                            <div class="card blog-card mb-4">
-                                <div class="card-img-wrapper">
-                                    <img src="{{asset($blog->image)}}" class="card-img-top" alt="Blog Post Image">
-                                    <div class="card-img-overlay d-flex align-items-start justify-content-end">
-                                        <span class="badge badge-category bg-primary">{{optional($blog->category_info)->name}}</span>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">{{$blog->title}}</h5>
-                                    <p class="card-text">{!! (\Illuminate\Support\Str::limit($blog->body, 40, '...')) !!}</p>
-                                    <a href="{{route('insights.detail', $blog->slug)}}" class="btn btn-link text-primary p-0 read-more">Read More <i class="fas fa-arrow-right ml-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
 
-                </div>
-
-            @endif
-            <!-- Comment Section -->
-{{--            <h3 class="text-center section-title mb-4">Leave a Comment</h3>--}}
-{{--            <div class="comment-section mt-4">--}}
-{{--                <form action="/submit-comment" method="POST">--}}
-{{--                    <div class="mb-3">--}}
-{{--                        <label for="name" class="form-label">Your Name</label>--}}
-{{--                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>--}}
-{{--                    </div>--}}
-{{--                    <div class="mb-3">--}}
-{{--                        <label for="email" class="form-label">Your Email</label>--}}
-{{--                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>--}}
-{{--                    </div>--}}
-{{--                    <div class="mb-3">--}}
-{{--                        <label for="comment" class="form-label">Your Comment</label>--}}
-{{--                        <textarea class="form-control" id="comment" name="comment" rows="5" placeholder="Write your comment here..." required></textarea>--}}
-{{--                    </div>--}}
-{{--                    <div class="text-center">--}}
-{{--                        <button type="submit" class="btn btn-primary">Submit Comment</button>--}}
-{{--                    </div>--}}
-{{--                </form>--}}
-{{--            </div>--}}
         </div>
     </section>
 

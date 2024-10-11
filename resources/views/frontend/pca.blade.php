@@ -14,7 +14,7 @@
         /* Hero Section */
         .service-header {
             position: relative;
-            background-image: url('https://media.istockphoto.com/id/2062608146/photo/a-female-nurse-caregiver-holds-hands-to-encourage-and-comfort-an-elderly-woman-for-care-and.webp?a=1&b=1&s=612x612&w=0&k=20&c=iE7nDzMFG-KFQr2BE6xK46lEXHvnWRzdoT5r3kLNq9g=');
+            background-image: url('{{asset('frontend/images/3.png')}}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

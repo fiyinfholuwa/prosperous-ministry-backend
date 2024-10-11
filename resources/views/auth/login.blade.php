@@ -88,7 +88,7 @@
             <div class="card my-5">
                 <div class="card-body">
                     <div  style="margin-bottom: 50px;" class="text-center mb-7">
-                        {{--                        <a  href="#"><img height="50px"  src="{{asset('backend/logo.svg')}}" alt="img"></a>--}}
+                        <a  href="{{route('home')}}"><img height="50px"  src="{{asset('frontend/images/Logo5.png')}}" alt="img"></a>
                     </div>
 
                     <h4 class="text-center f-w-500 mb-3">Sign In</h4>
@@ -111,7 +111,6 @@
                                 <input name="remember" class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="">
                                 <label class="form-check-label text-muted" for="customCheckc1">Remember me?</label>
                             </div>
-{{--                            <a href="{{ route('password.request') }}"><h6 class="text-secondary f-w-400 mb-0">Forgot Password?</h6></a>--}}
                         </div>
                         <div class="d-grid mt-4">
                             <button type="submit" class="btn btn-primary">Sign In</button>

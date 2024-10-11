@@ -11,7 +11,7 @@
         }
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://plus.unsplash.com/premium_photo-1661551859254-7878c939ad91?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGhlYWx0aGNhcmUlMjBhYm91dCUyMGJhbm5lcnxlbnwwfHwwfHx8MA%3D%3D') center center/cover no-repeat;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{asset('frontend/images/3.png')}}') center center/cover no-repeat;
             height: 75vh;
             display: flex;
             justify-content: center;

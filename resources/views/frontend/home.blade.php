@@ -2,7 +2,11 @@
 
 <!-- Hero Section -->
 @section('content')
-    <section class="hero text-center" style="background-image: url({{asset('frontend/images/Caregiving.avif')}}); background-size: cover; background-position: center; padding: 100px 0; color: white;">
+    <section class="hero text-center" style="position: relative; background-image: url({{asset('frontend/images/8.png')}}); background-size: cover; background-position: center; padding: 100px 0; color: navy;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
+        <div style="position: relative; z-index: 2;">
+            <!-- Your content goes here -->
+        </div>
         <div class="container">
             <h1>Compassionate Home Care for Your Loved Ones</h1>
             <p class="lead mb-4" style="font-weight: bold;">in West Orange & Westfield</p>
@@ -22,7 +26,7 @@
                     <a href="{{route('about')}}" class="btn btn-outline-primary mt-3">Learn More About Us</a>
                 </div>
                 <div class="col-md-6">
-                    <img src="{{asset('frontend/images/Caring nurse.webp')}}" alt="Caring nurse with patient" class="img-fluid rounded-3 shadow">
+                    <img src="{{asset('frontend/images/2.png')}}" alt="Caring nurse with patient" class="img-fluid rounded-3 shadow">
                 </div>
             </div>
         </div>

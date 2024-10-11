@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\Booking;
 use App\Models\Contact;
+use App\Models\PostCategory;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,8 @@ class FrontendController extends Controller
     public function insights(){
         $latest_blog = Blog::latest()->paginate(3);
         $spot_light = Blog::paginate(6);
-        return view('frontend.insights', compact('latest_blog', 'spot_light'));
+        $categories = PostCategory::all();
+        return view('frontend.insights', compact('latest_blog', 'spot_light', 'categories'));
     }
     public function insights_detail($slug){
         $blog = Blog::where('slug', '=', $slug)->first();
@@ -121,5 +123,19 @@ class FrontendController extends Controller
         ];
 
         return redirect()->back()->with($notification);
+    }
+
+    public function insight_search(Request $request)
+    {
+
+        $searchQuery = $request->input('query');
+        $categoryId = $request->input('category');
+
+
+        $blogs = Blog::where('title', 'like', '%' . $searchQuery . '%')
+            ->where('category_id', 'like', '%' . $categoryId . '%')->get();
+        $categories = PostCategory::all();
+
+        return view('frontend.insights_search', compact('blogs', 'categories', 'searchQuery'));
     }
 }

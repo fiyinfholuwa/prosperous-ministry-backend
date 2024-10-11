@@ -16,7 +16,7 @@
 <header class="sticky-top bg-white shadow-sm">
     <nav class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{route('home')}}">
                 <img src="{{asset('frontend/images/Logo5.png')}}" alt="AUTRIS Healthcare Logo" class="footer-logo">
             </a>
 
@@ -73,32 +73,32 @@
     </nav>
 
     <!-- Search Bar, Social Icons, and Call Button in One Row -->
-    <div class="bg-light py-2">
-        <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center">
-            <!-- Search Form -->
-            <form class="d-flex mb-3 mb-lg-0">
-                <input class="form-control rounded-pill border-0 shadow-sm me-2" type="search" placeholder="Search" aria-label="Search" style="width: 100%;">
-                <button class="btn btn-primary rounded-pill" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
+{{--    <div class="bg-light py-2">--}}
+{{--        <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center">--}}
+{{--            <!-- Search Form -->--}}
+{{--            <form class="d-flex mb-3 mb-lg-0">--}}
+{{--                <input class="form-control rounded-pill border-0 shadow-sm me-2" type="search" placeholder="Search" aria-label="Search" style="width: 100%;">--}}
+{{--                <button class="btn btn-primary rounded-pill" type="submit">--}}
+{{--                    <i class="fas fa-search"></i>--}}
+{{--                </button>--}}
+{{--            </form>--}}
 
-            <!-- Call Button and Social Media Icons -->
-            <div class="d-flex align-items-center">
-                <!-- Call Us Button -->
-                <a href="tel:+1234567890" class="btn btn-outline-primary rounded-pill me-3 px-3 py-2">
-                    <i class="fas fa-phone-alt me-2"></i> Call Us
-                </a>
+{{--            <!-- Call Button and Social Media Icons -->--}}
+{{--            <div class="d-flex align-items-center">--}}
+{{--                <!-- Call Us Button -->--}}
+{{--                <a href="tel:+1234567890" class="btn btn-outline-primary rounded-pill me-3 px-3 py-2">--}}
+{{--                    <i class="fas fa-phone-alt me-2"></i> Call Us--}}
+{{--                </a>--}}
 
-                <!-- Social Media Icons -->
-                <a href="#" class="me-2" style="color: #1877F2;"><i class="fab fa-facebook fa-lg"></i></a>
-                <a href="#" class="me-2" style="color: #0077B5;"><i class="fab fa-linkedin fa-lg"></i></a>
-                <a href="#" class="me-2" style="color: #C13584;"><i class="fab fa-instagram fa-lg"></i></a>
-                <a href="#" class="me-2" style="color: #FF0000;"><i class="fab fa-youtube fa-lg"></i></a>
+{{--                <!-- Social Media Icons -->--}}
+{{--                <a href="#" class="me-2" style="color: #1877F2;"><i class="fab fa-facebook fa-lg"></i></a>--}}
+{{--                <a href="#" class="me-2" style="color: #0077B5;"><i class="fab fa-linkedin fa-lg"></i></a>--}}
+{{--                <a href="#" class="me-2" style="color: #C13584;"><i class="fab fa-instagram fa-lg"></i></a>--}}
+{{--                <a href="#" class="me-2" style="color: #FF0000;"><i class="fab fa-youtube fa-lg"></i></a>--}}
 
-            </div>
-        </div>
-    </div>
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 </header>
 
 @yield('content')
@@ -133,10 +133,15 @@
             <div class="footer-social">
                 <h5>Follow Us</h5>
                 <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="me-2" style="color: #1877F2;"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="me-2" style="color: #0077B5;"><i class="fab fa-linkedin fa-lg"></i></a>
+                    <a href="#" class="me-2" style="color: #C13584;"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="me-2" style="color: #FF0000;"><i class="fab fa-youtube fa-lg"></i></a>
+
+{{--                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>--}}
+{{--                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>--}}
+{{--                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>--}}
+{{--                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>--}}
                 </div>
                 <div class="newsletter">
                     <h6>Subscribe to Our Newsletter</h6>

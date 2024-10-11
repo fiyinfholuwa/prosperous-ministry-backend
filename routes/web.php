@@ -67,6 +67,7 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('/about', 'about')->name('about');
     Route::get('/services', 'services')->name('services');
     Route::get('/insights', 'insights')->name('insights');
+    Route::get('/insights/search', 'insight_search')->name('insights.search');
     Route::get('/insights/details/{slug}', 'insights_detail')->name('insights.detail');
     Route::get('/testimonials', 'testimonials')->name('testimonials');
     Route::get('/resources', 'resources')->name('resources');
