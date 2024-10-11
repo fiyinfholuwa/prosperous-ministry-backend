@@ -35,7 +35,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.3);
             z-index: 2;
         }
 
@@ -47,9 +47,10 @@
         }
 
         .service-header p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             margin-top: 20px;
             z-index: 3;
+            color: #ffffff;
         }
 
         /* Section Headings */
