@@ -256,40 +256,40 @@
             </section>
 
             <!-- Meet the Team -->
-            <section class="section-bg py-5">
-                <div class="container">
-                    <h2 class="section-title text-center mb-5">Meet the Team</h2>
-                    <div class="row g-4 text-center justify-content-center">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card team-member p-4">
-                                <div class="team-member-img-wrapper">
-                                    <img src="https://plus.unsplash.com/premium_photo-1661578535048-7a30e3a71d25?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2hpZWYlMjBtZWRpY2FsJTIwb2ZmaWNlcnxlbnwwfHwwfHx8MA%3D%3D" alt="John Doe" class="rounded-circle mb-4 img-fluid">
-                                </div>
-                                <h4 class="team-member-name">John Doe</h4>
-                                <p class="text-muted">Chief Medical Officer</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card team-member p-4">
-                                <div class="team-member-img-wrapper">
-                                    <img src="https://media.istockphoto.com/id/513473609/photo/confident-hospital-nurse-smiling-while-working-in-modern-hospital.jpg?s=612x612&w=0&k=20&c=JK9Fk8nTJa_4noPCM3UsKLS9R1d14OCElnFT3VnstNE=" alt="Emily Williams" class="rounded-circle mb-4 img-fluid">
-                                </div>
-                                <h4 class="team-member-name">Emily Williams</h4>
-                                <p class="text-muted">Head of Nursing</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card team-member p-4">
-                                <div class="team-member-img-wrapper">
-                                    <img src="https://images.unsplash.com/photo-1559718062-361155fad299?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RGlyZWN0b3IlMjBvZiUyMG9wZXJhdGlvbnN8ZW58MHx8MHx8fDA%3D" alt="Michael Smith" class="rounded-circle mb-4 img-fluid">
-                                </div>
-                                <h4 class="team-member-name">Michael Smith</h4>
-                                <p class="text-muted">Director of Operations</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+{{--            <section class="section-bg py-5">--}}
+{{--                <div class="container">--}}
+{{--                    <h2 class="section-title text-center mb-5">Meet the Team</h2>--}}
+{{--                    <div class="row g-4 text-center justify-content-center">--}}
+{{--                        <div class="col-lg-4 col-md-6">--}}
+{{--                            <div class="card team-member p-4">--}}
+{{--                                <div class="team-member-img-wrapper">--}}
+{{--                                    <img src="https://plus.unsplash.com/premium_photo-1661578535048-7a30e3a71d25?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2hpZWYlMjBtZWRpY2FsJTIwb2ZmaWNlcnxlbnwwfHwwfHx8MA%3D%3D" alt="John Doe" class="rounded-circle mb-4 img-fluid">--}}
+{{--                                </div>--}}
+{{--                                <h4 class="team-member-name">John Doe</h4>--}}
+{{--                                <p class="text-muted">Chief Medical Officer</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-lg-4 col-md-6">--}}
+{{--                            <div class="card team-member p-4">--}}
+{{--                                <div class="team-member-img-wrapper">--}}
+{{--                                    <img src="https://media.istockphoto.com/id/513473609/photo/confident-hospital-nurse-smiling-while-working-in-modern-hospital.jpg?s=612x612&w=0&k=20&c=JK9Fk8nTJa_4noPCM3UsKLS9R1d14OCElnFT3VnstNE=" alt="Emily Williams" class="rounded-circle mb-4 img-fluid">--}}
+{{--                                </div>--}}
+{{--                                <h4 class="team-member-name">Emily Williams</h4>--}}
+{{--                                <p class="text-muted">Head of Nursing</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-lg-4 col-md-6">--}}
+{{--                            <div class="card team-member p-4">--}}
+{{--                                <div class="team-member-img-wrapper">--}}
+{{--                                    <img src="https://images.unsplash.com/photo-1559718062-361155fad299?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RGlyZWN0b3IlMjBvZiUyMG9wZXJhdGlvbnN8ZW58MHx8MHx8fDA%3D" alt="Michael Smith" class="rounded-circle mb-4 img-fluid">--}}
+{{--                                </div>--}}
+{{--                                <h4 class="team-member-name">Michael Smith</h4>--}}
+{{--                                <p class="text-muted">Director of Operations</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </section>--}}
 
             <!-- Accreditations & Certifications -->
 {{--            <section class="section-bg">--}}
