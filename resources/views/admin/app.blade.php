@@ -185,8 +185,8 @@
                         <li class="pc-item"><a class="pc-link" href="{{route('admin.blog.all')}}">All Insights</a>
                         </li>
 
-                        <li class="pc-item"><a class="pc-link" href="{{route('admin.comment.all')}}">Comments</a>
-                        </li>
+{{--                        <li class="pc-item"><a class="pc-link" href="{{route('admin.comment.all')}}">Comments</a>--}}
+{{--                        </li>--}}
 
                     </ul>
                 </li>
