@@ -79,7 +79,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-lg-12 mt-3">
-                                            <textarea id="editor" name="body" class="form-control" rows="10">{{old('body')}}</textarea>
+                                            <textarea id="myTextarea" name="body" class="form-control" rows="10">{{old('body')}}</textarea>
                                             @error('body')
                                             <p style="color: red; font-size:10px; font-weight: bolder">{{$message}}</p>
                                             @enderror
