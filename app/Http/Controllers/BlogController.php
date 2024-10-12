@@ -4,10 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\Comment;
+use App\Models\EventAttendee;
 use App\Models\PostCategory;
+use App\Models\ProgramEvent;
 use App\Models\Testimonial;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
@@ -316,4 +320,157 @@ class BlogController extends Controller
         );
         return redirect()->back()->with($notification);
     }
+
+    public function admin_event_view()
+    {
+        return view('admin.event_view');
+    }
+
+    public function admin_event_edit($id)
+    {
+        $event = ProgramEvent::findOrFail($id);
+        return view('admin.event_edit', compact('event'));
+    }
+
+    public function admin_event_save(Request $request)
+    {
+        $request->validate([
+            'title' => 'required',
+            'body' => 'required',
+        ]);
+
+        $baseUrl = request()->getSchemeAndHttpHost();
+        $url_slug = strtolower($request->title);
+        $label_slug= preg_replace('/\s+/', '-', $url_slug);
+
+        $image = $request->file('image');
+        $extension = $image->getClientOriginalExtension();
+        $filename = time() . '.' . $extension;
+        $directory = 'uploads/event/';
+        if (!file_exists($directory)) {
+            mkdir($directory, 0755, true);
+        }
+        $image->move($directory, $filename);
+        $path = $directory . $filename;
+        $new_post = new ProgramEvent();
+        $new_post->title = $request->title;
+        $new_post->slug = GeneralController::slugify($request->title);
+        $new_post->body = $request->body;
+        $new_post->image = $path;
+        $new_post->start_date = $request->start_date;
+        $new_post->end_date = $request->end_date;
+        $new_post->time = $request->time;
+        $new_post->address = $request->address;
+        $new_post->save();
+        $notification = array(
+            'message' => 'Event Successfully added',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
+
+    public function admin_event_all()
+    {
+        $events = ProgramEvent::all();
+        return view('admin.event_all', compact('events'));
+    }
+
+    public function admin_event_update(Request $request, $id)
+    {
+
+        $new_post = ProgramEvent::findOrFail($id);
+
+        $request->validate([
+            'title' => 'required',
+            'body' => 'required',
+        ]);
+
+        $baseUrl = request()->getSchemeAndHttpHost();
+        $url_slug = strtolower($request->title);
+        $label_slug= preg_replace('/\s+/', '-', $url_slug);
+
+        if ($request->has('image')){
+            $image = $request->file('image');
+            $extension = $image->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $directory = 'uploads/event/';
+            if (!file_exists($directory)) {
+                mkdir($directory, 0755, true);
+            }
+            $image->move($directory, $filename);
+            $path = $directory . $filename;
+        }else{
+            $path =  $new_post->image;
+        }
+        $new_post->title = $request->title;
+        $new_post->slug = GeneralController::slugify($request->title);
+        $new_post->body = $request->body;
+        $new_post->image = $path;
+        $new_post->start_date = $request->start_date;
+        $new_post->end_date = $request->end_date;
+        $new_post->time = $request->time;
+        $new_post->address = $request->address;
+        $new_post->save();
+        $notification = array(
+            'message' => 'Event Successfully added',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('admin.event.all')->with($notification);
+    }
+
+
+    public function admin_event_delete($id)
+    {
+        $event = ProgramEvent::findOrFail($id);
+        $event->delete();
+        $notification = array(
+            'message' => 'Event Successfully Deleted',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
+
+
+    public function admin_attendee_report(Request $request)
+    {
+        ini_set('max_execution_time', 0);
+
+        $dateFrom = Carbon::createFromFormat('Y-m-d', $request->date_from)->startOfDay();
+        $dateTo = Carbon::createFromFormat('Y-m-d', $request->date_to)->endOfDay();
+        $type = $request->event_id;
+
+        $query = EventAttendee::whereBetween('created_at', [$dateFrom, $dateTo]);
+        if (!empty($type)) {
+            $query->where('event_id', $type);
+        }
+
+        $data = $query->get();
+
+        $excelContent = "SN,Full Name,Email, Event Title,  Date Created\n"; // Header row
+        $i = 0;
+
+        foreach ($data as $item) {
+            $i++;
+            $event_info = ProgramEvent::where('id', $item->event_id)->first();
+
+            $excelContent .= "$i,{$item->full_name},{$item->email},{$item->phone},{$event_info->title},{$item->created_at}\n";
+        }
+        $headers = array(
+            "Content-type" => "text/csv",
+            "Content-Disposition" => "attachment; filename=event_attendee_download.csv",
+            "Pragma" => "no-cache",
+            "Cache-Control" => "must-revalidate, post-check=0, pre-check=0",
+            "Expires" => "0"
+        );
+        return response()->stream(
+            function () use ($excelContent) {
+                echo $excelContent;
+            },
+            200,
+            $headers
+        );
+
+    }
+
+
 }

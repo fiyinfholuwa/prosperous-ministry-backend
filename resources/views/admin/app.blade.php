@@ -5,7 +5,7 @@
 
 <!-- Mirrored from ableproadmin.com/dashboard/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 18:19:58 GMT -->
 <head>
-    <title>Health - Dashboard</title>
+    <title>Prosperous - Dashboard</title>
     <!-- [Meta] -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -109,7 +109,7 @@
         <div class="m-header">
             <a href="" class="b-brand text-primary">
                 <!-- ========   Change your logo from here   ============ -->
-                <img style="height: 60px" src="{{asset('https://health-care-rho-six.vercel.app/images/Logo5.png')}}" class="img-fluid" alt="logo">
+                <img style="height: 60px" src="{{asset('frontend/images/logo.png')}}" class="img-fluid" alt="logo">
                 {{--                <span class="badge bg-light-success rounded-pill ms-2 theme-version">v9.0</span>--}}
             </a>
         </div>
@@ -166,53 +166,12 @@
 
                 </li>
 
-                <li class="pc-item pc-hasmenu">
-                    <a href="#!" class="pc-link">
-                        <span class="pc-micon">
-                            <i style="font-size: 20px;" class="ph-duotone ph-code-block"></i>
-
-                        </span>
-                        <span class="pc-mtext">Insights</span><span class="pc-arrow"><i
-                                data-feather="chevron-right"></i></span
-                        ></a>
-                    <ul class="pc-submenu">
-
-
-                        <li class="pc-item"><a class="pc-link" href="{{route('admin.category.view')}}"> Category</a>
-                        </li>
-                        <li class="pc-item"><a class="pc-link" href="{{route('admin.blog.view')}}">Add Insight</a>
-                        </li>
-                        <li class="pc-item"><a class="pc-link" href="{{route('admin.blog.all')}}">All Insights</a>
-                        </li>
-
-{{--                        <li class="pc-item"><a class="pc-link" href="{{route('admin.comment.all')}}">Comments</a>--}}
-{{--                        </li>--}}
-
-                    </ul>
-                </li>
-
-                <li class="pc-item pc-hasmenu">
-                    <a href="#!" class="pc-link">
-                        <span class="pc-micon">
-                            <i style="font-size: 20px;" class="ph-duotone ph-quotes"></i>
-
-                        </span>
-                        <span class="pc-mtext">Testimonials</span><span class="pc-arrow"><i
-                                data-feather="chevron-right"></i></span
-                        ></a>
-                    <ul class="pc-submenu">
-                        <li class="pc-item"><a class="pc-link" href="{{route('admin.testimonial.view')}}">Add
-                                Testimonial</a></li>
-                        <li class="pc-item"><a class="pc-link" href="{{route('admin.testimonial.all')}}">All
-                                Testimonials</a></li>
-                    </ul>
-                </li>
 
 
                 <li class="pc-item pc-hasmenu">
-                    <a href="{{route('booking.all')}}" class="pc-link">
+                    <a href="{{route('admin.event.view')}}" class="pc-link">
                         <i style="font-size: 20px;" class="ph-duotone ph-calendar-plus"></i>
-                        <span class="pc-mtext">Booking Requests</span>
+                        <span class="pc-mtext">Add Event</span>
                         {{--                        <span class="pc-arrow"><i data-feather="chevron-right"></i></span>--}}
                         {{--                        <span class="pc-badge">2</span>--}}
                     </a>
@@ -220,9 +179,20 @@
                 </li>
 
                 <li class="pc-item pc-hasmenu">
+                    <a href="{{route('admin.event.all')}}" class="pc-link">
+                        <i style="font-size: 20px;" class="ph-duotone ph-calendar-check"></i>
+                        <span class="pc-mtext">All Events</span>
+                        {{--                        <span class="pc-arrow"><i data-feather="chevron-right"></i></span>--}}
+                        {{--                        <span class="pc-badge">2</span>--}}
+                    </a>
+
+                </li>
+
+
+                <li class="pc-item pc-hasmenu">
                     <a href="{{route('contact.all')}}" class="pc-link">
-                        <i style="font-size: 20px;" class="ph-duotone ph-phone-disconnect"></i>
-                        <span class="pc-mtext">Contact Feedbacks</span>
+                        <i style="font-size: 20px;" class="ph-duotone ph-users-four"></i>
+                        <span class="pc-mtext">All Attendees</span>
                         {{--                        <span class="pc-arrow"><i data-feather="chevron-right"></i></span>--}}
                         {{--                        <span class="pc-badge">2</span>--}}
                     </a>
@@ -283,12 +253,12 @@
                         </svg>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
-                        <a href="" class="dropdown-item">
-                            <i class="ti ti-user"></i>
-                            <span>My Account</span>
-                        </a>
+{{--                        <a href="" class="dropdown-item">--}}
+{{--                            <i class="ti ti-user"></i>--}}
+{{--                            <span>My Account</span>--}}
+{{--                        </a>--}}
 
-                        <a href="" class="dropdown-item">
+                        <a href="{{route('logout')}}" class="dropdown-item">
                             <i class="ti ti-power"></i>
                             <span>Logout</span>
                         </a>
@@ -304,10 +274,10 @@
                         aria-haspopup="false"
                         aria-expanded="false"
                     >
-                        <svg class="pc-icon">
-                            <use xlink:href="#custom-notification"></use>
-                        </svg>
-                        <span class="badge bg-success pc-h-badge">{{$booking_count}}</span>
+{{--                        <svg class="pc-icon">--}}
+{{--                            <use xlink:href="#custom-notification"></use>--}}
+{{--                        </svg>--}}
+                        <span class="badge bg-success pc-h-badge"></span>
                     </a>
 {{--                    <div class="dropdown-menu dropdown-notification dropdown-menu-end pc-h-dropdown">--}}
 {{--                        <div class="dropdown-header d-flex align-items-center justify-content-between">--}}

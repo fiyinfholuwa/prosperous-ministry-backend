@@ -88,7 +88,7 @@
             <div class="card my-5">
                 <div class="card-body">
                     <div  style="margin-bottom: 50px;" class="text-center mb-7">
-                        <a  href="{{route('home')}}"><img height="50px"  src="{{asset('frontend/images/Logo5.png')}}" alt="img"></a>
+                        <a  href="{{route('home')}}"><img height="50px"  src="{{asset('frontend/images/logo.png')}}" alt="img"></a>
                     </div>
 
                     <h4 class="text-center f-w-500 mb-3">Sign In</h4>

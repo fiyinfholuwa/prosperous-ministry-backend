@@ -23,9 +23,12 @@ class GeneralController extends Controller
     }
 
 
-    public static function slugify($text):string
+    public static function slugify($text): string
     {
-        $text = str_replace(' ', '-', $text);
+        $text = preg_replace('/[^a-zA-Z0-9\s]/', '', $text);
+        $text = preg_replace('/[\s-]+/', '-', $text);
+        $text = trim($text, '-');
         return strtolower($text);
     }
+
 }

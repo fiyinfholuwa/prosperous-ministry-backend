@@ -5,6 +5,8 @@ namespace App\Providers;
 use App\Models\Blog;
 use App\Models\Booking;
 use App\Models\Contact;
+use App\Models\EventAttendee;
+use App\Models\ProgramEvent;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
@@ -27,12 +29,10 @@ class AppServiceProvider extends ServiceProvider
 
             if (Auth::check()) {
 
-                $blog_count = Blog::count();
-                $booking_count = Booking::count();
-                $contact_count = Contact::count();
-                $view->with('blog_count', $blog_count);
-                $view->with('booking_count', $booking_count);
-                $view->with('contact_count', $contact_count);
+                $event_count = ProgramEvent::count();
+                $attendance_count = EventAttendee::count();
+                $view->with('event_count', $event_count);
+                $view->with('attendance_count', $attendance_count);
             }
         });
     }

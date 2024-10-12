@@ -1,176 +1,219 @@
 @extends('frontend.app')
 
-<!-- Hero Section -->
+
 @section('content')
-    <section class="hero text-center" style="position: relative; background-image: url({{asset('frontend/images/8.png')}}); background-size: cover; background-position: center; padding: 100px 0; color: navy;">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
-        <div style="position: relative; z-index: 2;">
-            <!-- Your content goes here -->
+<!-- hero
+================================================== -->
+<section id="hero" class="s-hero target-section">
+
+    <div class="s-hero__bg">
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <div class="row s-hero__content">
+        <div class="column">
+
+            <h1>Welcome.</h1>
+            <div class="s-hero__content-about">
+
+                <p>
+                    We are dedicated to serving <br>
+                    with faith and compassion, <br>
+                    spreading the message of hope.
+                </p>
+
+{{--                <footer>--}}
+{{--                    <div class="s-hero__content-social">--}}
+{{--                        <a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>--}}
+{{--                        <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a>--}}
+{{--                        <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a>--}}
+{{--                        <a href="#0"><i class="fab fa-youtube" aria-hidden="true"></i></a>--}}
+{{--                    </div>--}}
+{{--                </footer>--}}
+            </div>
+
         </div>
-        <div class="container">
-            <h1>Compassionate Home Care for Your Loved Ones</h1>
-            <p class="lead mb-4" style="font-weight: bold;">in West Orange & Westfield</p>
-            <a href="{{route('booking')}}" class="btn btn-primary btn-lg">Book a Free Consultation</a>
-        </div>
-    </section>
+    </div>
 
 
-    <!-- Introduction Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2 class="mb-4">Welcome to AUTRIS Healthcare</h2>
-                    <p class="lead">We provide compassionate and personalized home care services to help your loved ones maintain their independence and quality of life.</p>
-                    <p>Our team of skilled professionals is dedicated to delivering exceptional care tailored to each individual's needs, ensuring comfort and peace of mind for families.</p>
-                    <a href="{{route('about')}}" class="btn btn-outline-primary mt-3">Learn More About Us</a>
-                </div>
-                <div class="col-md-6">
-                    <img src="{{asset('frontend/images/2.png')}}" alt="Caring nurse with patient" class="img-fluid rounded-3 shadow">
-                </div>
+    <div class="s-hero__scroll">
+        <a href="#about" class="s-hero__scroll-link smoothscroll">
+            Learn More
+        </a>
+    </div>
+
+</section> <!-- end s-hero -->
+
+
+<!-- about
+================================================== -->
+<section id="about" class="s-about">
+
+    <div class="horizontal-line"></div>
+
+    <div class="row">
+        <div class="column large-12">
+
+            <div class="section-title" data-num="01" data-aos="fade-up">
+                <h3 class="h6">Who We Are</h3>
+            </div>
+
+        </div>
+
+        <div class="column large-6 w-900-stack s-about__intro-text">
+            <h1 class="display-1" data-aos="fade-up">
+                <!--                    We are a ministry committed to spreading the Gospel, serving communities, and living out our faith.-->
+            </h1>
+
+            <p class="lead" data-aos="fade-up">
+                Prosperous People Ministry, where God delights in your prosperity and growth. In our community, we pray, fellowship, teach the word and network with one another, all while embracing His promise of health and abundance. Thank you for visiting and I look forward to connecting with you. (Abayomi Bello, President PPM)
+            </p>
+        </div>
+
+        <div class="column large-6 w-900-stack s-about__photo-block">
+            <div style="width: 100%; height: 300px;" class="s-about__photo" data-aos="fade-up"></div>
+        </div>
+    </div>
+
+    <div class="row block-large-1-2 block-tab-full s-about__process item-list">
+        <div class="column item item-process" data-aos="fade-up">
+            <h3 class="item-title">Mission</h3>
+            <p>
+                At Prosperous People Ministry, our mission is to transform lives through the truth of God’s Word, empowering individuals to prosper in every area—spiritually, mentally, physically, and socially. We are dedicated to teaching the true message of prosperity and equipping believers to live victorious, abundant lives that reflect God’s goodness and grace.
+            </p>
+        </div>
+        <div class="column item item-process" data-aos="fade-up">
+            <h3 class="item-title">Vision</h3>
+            <p>
+                We envision a community of believers who thrive in God’s promises, carrying the light of Christ across all borders and breaking through limitations. Through faith, fellowship, and strategic outreach, we aim to redefine prosperity and inspire a generation to live fully in God’s abundant love and purpose.
+            </p>
+        </div>
+        <!--            <div class="column item item-process" data-aos="fade-up">-->
+        <!--                <h3 class="item-title">Teach</h3>-->
+        <!--                <p>-->
+        <!--                    We are committed to teaching the Word of God, helping others grow in their faith and understanding of the Bible.-->
+        <!--                </p>-->
+        <!--            </div>-->
+        <!--            <div class="column item item-process" data-aos="fade-up">-->
+        <!--                <h3 class="item-title">Transform</h3>-->
+        <!--                <p>-->
+        <!--                    Through God’s grace, we seek to transform lives, helping individuals and communities to experience spiritual growth and renewal.-->
+        <!--                </p>-->
+        <!--            </div>-->
+    </div>
+
+</section> <!-- end s-about -->
+
+<section id="" class="s-portfolio" style="background: #da84b1;">
+
+    <div class="row s-porfolio__top">
+
+        <div class="column large-10 -stack">
+            <h1 class="display-1" data-aos="fade-up">
+                Be Part of our growing Community
+                Join community of believers and grow
+            </h1>
+        </div>
+    </div> <!-- end s-portfolio__top-->
+
+    <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
+        <a target="_blank" href="https://chat.whatsapp.com/GEWK7wUcXcPK6CFsdTTen3" class="btn btn-dark">Join Our Community</a>
+
+    </div> <!-- folio-list -->
+
+</section> <!-- end s-portfolio -->
+
+
+<!-- services
+================================================== -->
+<section id="services" class="s-services">
+
+    <div class="row">
+        <div class="column large-12">
+            <div class="section-title" data-num="02" data-aos="fade-up">
+                <h3 class="h6">Our Events
+                </h3>
             </div>
         </div>
-    </section>
-
-    <!-- Services Overview -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center section-title">Our Services</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="service-box text-center">
-                        <i class="fas fa-user-nurse"></i>
-                        <h3>Personal Care Assistant (PCA)</h3>
-                        <p>Assistance with daily living activities and personal care needs.</p>
-                        <a href="{{route('pca')}}" class="btn btn-sm btn-primary mt-3">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box text-center">
-                        <i class="fas fa-stethoscope"></i>
-                        <h3>Skilled Nursing</h3>
-                        <p>Professional nursing care for complex medical needs.</p>
-                        <a href="{{route('nurse')}}" class="btn btn-sm btn-primary mt-3">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box text-center">
-                        <i class="fas fa-home"></i>
-                        <h3>Live-In Care</h3>
-                        <p>24/7 care and support in the comfort of your home.</p>
-                        <a href="{{route('live.care')}}" class="btn btn-sm btn-primary mt-3">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box text-center">
-                        <i class="fas fa-walking"></i>
-                        <h3>Rehabilitation Therapy</h3>
-                        <p>Specialized therapy to improve mobility and independence.</p>
-                        <a href="{{route('therapy')}}" class="btn btn-sm btn-primary mt-3">Learn More</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="service-box text-center">
-                        <i class="fas fa-user-nurse"></i>
-                        <h3>Nursing</h3>
-                        <p>General nursing care for individuals with health conditions requiring professional monitoring.
-                        </p>
-                        <a href="{{route('nursing')}}" class="btn btn-sm btn-primary mt-3">Learn More</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="service-box text-center">
-                        <i class="fas fa-child"></i>
-                        <h3>Pediatrics
-                        </h3>
-                        <p>Specialized medical care tailored for infants, children, and adolescents.</p>
-                        <a href="{{route('pediatrics')}}" class="btn btn-sm btn-primary mt-3">Learn More</a>
-                    </div>
-                </div>
-            </div>
+        <div class="column large-12 w-900-stack">
+            <h1 class="display-1" data-aos="fade-up">
+                Experience engaging discussions and meaningful fellowship whether you are seeking spiritual growth, financial wisdom or physical health. This is the perfect opportunity to connect and thrive.
+            </h1>
         </div>
-    </section>
 
-    <!-- Client Testimonials -->
-    @if(count($testimonials) > 0)
-        <section class="py-5">
-            <div class="container">
-                <h2 class="text-center section-title">What Our Clients Say</h2>
-                <div class="row">
-                    @foreach($testimonials as $test)
-                        <div class="col-md-6">
-                            <div class="testimonial">
-                                <p>{{$test->body}}</p>
-                                <footer class="blockquote-footer mt-3">{{$test->full_name}}</footer>
-                            </div>
-                        </div>
+    </div>
 
-                    @endforeach
-                </div>
-                <div class="text-center mt-5">
-                    <a href="{{route('testimonials')}}" class="btn btn-primary">Read More Testimonials</a>
-                </div>
-            </div>
-        </section>
+    @if(count($events) > 0)
+        <div class="row block-large-1-2 block-tab-full s-services__services item-list">
+            @foreach($events as $event)
+                    <div class="column item item-service" data-aos="fade-up">
+                        <a href="{{route('event.detail', $event->slug)}}">
 
+                        <span class="service-icon service-icon--community-outreach"></span>
+                        <h3 class="item-title">{{$event->title}}</h3>
+                        <img src="{{asset($event->image)}}" style="width: 100%">
+                        <p>
+                            {!! (\Illuminate\Support\Str::limit($event->body, 40, '...')) !!}                    </p>
+                        </a>
+                    </div>
+            @endforeach
+            <a href="{{route('event')}}" class="btn btn-danger">View All Events</a>
+        </div>
     @endif
 
-    <!-- Book a Consultation -->
-    <section class="py-5 cta-section">
-        <div class="container text-center">
-            <h2 class="mb-4">Ready to Get Started?</h2>
-            <p class="lead mb-4">Book a free consultation with our care experts today and discover how we can help your loved ones.</p>
-            <a href="{{route('booking')}}" class="btn btn-light btn-lg" aria-label="Book your consultation">
-                Book Your Consultation
-            </a>
-        </div>
-    </section>
 
-    @if(count($blogs) > 0 )
-        <section class="py-5 bg-light blog-preview-section">
-            <div class="container">
-                <h4 class="text-center section-title mb-5">Latest from Autris Insights</h4>
-                <div class="row">
-                    @foreach($blogs as $blog)
-                        <div class="col-md-4">
-                            <div class="card blog-card mb-4">
-                                <div class="card-img-wrapper">
-                                    <img src="{{asset($blog->image)}}" class="card-img-top" alt="Blog Post Image">
-                                    <div class="card-img-overlay d-flex align-items-start justify-content-end">
-                                        <span class="badge badge-category bg-primary">{{optional($blog->category_info)->name}}</span>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">{{$blog->title}}</h5>
-                                    <p class="card-text">{!! (\Illuminate\Support\Str::limit($blog->body, 40, '...')) !!}</p>
-                                    <a href="{{route('insights.detail', $blog->slug)}}" class="btn btn-link text-primary p-0 read-more">Read More <i class="fas fa-arrow-right ml-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
+</section> <!-- end s-services -->
 
-                    @endforeach
+<section id="events" class="s-portfolio" style="background: #da84b1;">
 
-                </div>
-                <div class="text-center mt-5">
-                    <a href="{{route('insights')}}" class="btn btn-primary btn-lg">Visit Autris Insights</a>
-                </div>
+    <div class="row s-porfolio__top">
+        <div class="column large-6 w-900-stack">
+            <div class="section-title" data-num="03" data-aos="fade-up">
+                <h3 class="h6" style="color: black;">Inspired Articles</h3>
             </div>
-        </section>
-
-    @endif
-    <!-- Blog Preview Section -->
-
-    <!-- Join Us Section (before the footer) -->
-    <section class="join-us">
-        <div class="container">
-            <h2>Join Us in Transforming Healthcare</h2>
-            <a href="" class="btn btn-apply">APPLY NOW</a>
         </div>
-    </section>
+        <div class="column large-12 w-900-stack">
+            <h1 class="display-1" data-aos="fade-up">
+                Explore Inspiring articles that uplift and empower.</h1>
+        </div>
+    </div> <!-- end s-portfolio__top-->
 
-    <!-- Divider before footer -->
+    <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
+        <a href="" class="btn btn-dark">Explore Articles</a>
 
+    </div> <!-- folio-list -->
+
+</section> <!-- end s-portfolio -->
+
+
+<!-- clients
+================================================== -->
+
+
+<!-- contact
+================================================== -->
+<section class="s-contact">
+
+    <div class="row narrower s-contact__top h-text-center">
+        <div class="column">
+            <h3 class="h6">Get In Touch</h3>
+            <h1 class="display-1">
+                Come to Jesus
+                Accept Jesus as your personal Lord and Saviour today
+            </h1>
+        </div>
+    </div> <!-- s-contact__top -->
+
+    <div class="row h-text-center">
+        <div class="column">
+            <p class="s-contact__email">
+                <a target="_blank" href="https://forms.gle/PQovNmooa7UqggBx7">contact us</a>
+            </p>
+        </div>
+    </div>
+
+</section> <!-- end s-contact -->
 @endsection
-<!-- Footer -->
+
+<!-- footer
+================================================== -->
