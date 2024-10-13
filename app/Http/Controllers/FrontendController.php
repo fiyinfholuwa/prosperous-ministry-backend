@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 class FrontendController extends Controller
 {
     public function home(){
-        $events = ProgramEvent::paginate(2);
+        $events = ProgramEvent::paginate(3);
         return view('frontend.home', compact('events'));
     }
 

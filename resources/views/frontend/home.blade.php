@@ -1,219 +1,358 @@
-@extends('frontend.app')
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Prosperous Ministry</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{asset('frontend/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
 
-@section('content')
-<!-- hero
-================================================== -->
-<section id="hero" class="s-hero target-section">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/templatemo-scholar.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/animate.css')}}">
+    <link rel="stylesheet " href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!--
 
-    <div class="s-hero__bg">
-        <div class="gradient-overlay"></div>
-    </div>
+    TemplateMo 586 Scholar
 
-    <div class="row s-hero__content">
-        <div class="column">
+    https://templatemo.com/tm-586-scholar
 
-            <h1>Welcome.</h1>
-            <div class="s-hero__content-about">
+    -->
+</head>
 
-                <p>
-                    We are dedicated to serving <br>
-                    with faith and compassion, <br>
-                    spreading the message of hope.
-                </p>
+<body>
 
-{{--                <footer>--}}
-{{--                    <div class="s-hero__content-social">--}}
-{{--                        <a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>--}}
-{{--                        <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a>--}}
-{{--                        <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a>--}}
-{{--                        <a href="#0"><i class="fab fa-youtube" aria-hidden="true"></i></a>--}}
-{{--                    </div>--}}
-{{--                </footer>--}}
-            </div>
+<!-- ***** Preloader Start ***** -->
+{{--<div id="js-preloader" class="js-preloader">--}}
+{{--    <div class="preloader-inner">--}}
+{{--        <span class="dot"></span>--}}
+{{--        <div class="dots">--}}
+{{--            <span></span>--}}
+{{--            <span></span>--}}
+{{--            <span></span>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
+<!-- ***** Preloader End ***** -->
 
-        </div>
-    </div>
-
-
-    <div class="s-hero__scroll">
-        <a href="#about" class="s-hero__scroll-link smoothscroll">
-            Learn More
-        </a>
-    </div>
-
-</section> <!-- end s-hero -->
-
-
-<!-- about
-================================================== -->
-<section id="about" class="s-about">
-
-    <div class="horizontal-line"></div>
-
-    <div class="row">
-        <div class="column large-12">
-
-            <div class="section-title" data-num="01" data-aos="fade-up">
-                <h3 class="h6">Who We Are</h3>
-            </div>
-
-        </div>
-
-        <div class="column large-6 w-900-stack s-about__intro-text">
-            <h1 class="display-1" data-aos="fade-up">
-                <!--                    We are a ministry committed to spreading the Gospel, serving communities, and living out our faith.-->
-            </h1>
-
-            <p class="lead" data-aos="fade-up">
-                Prosperous People Ministry, where God delights in your prosperity and growth. In our community, we pray, fellowship, teach the word and network with one another, all while embracing His promise of health and abundance. Thank you for visiting and I look forward to connecting with you. (Abayomi Bello, President PPM)
-            </p>
-        </div>
-
-        <div class="column large-6 w-900-stack s-about__photo-block">
-            <div style="width: 100%; height: 300px;" class="s-about__photo" data-aos="fade-up"></div>
-        </div>
-    </div>
-
-    <div class="row block-large-1-2 block-tab-full s-about__process item-list">
-        <div class="column item item-process" data-aos="fade-up">
-            <h3 class="item-title">Mission</h3>
-            <p>
-                At Prosperous People Ministry, our mission is to transform lives through the truth of God’s Word, empowering individuals to prosper in every area—spiritually, mentally, physically, and socially. We are dedicated to teaching the true message of prosperity and equipping believers to live victorious, abundant lives that reflect God’s goodness and grace.
-            </p>
-        </div>
-        <div class="column item item-process" data-aos="fade-up">
-            <h3 class="item-title">Vision</h3>
-            <p>
-                We envision a community of believers who thrive in God’s promises, carrying the light of Christ across all borders and breaking through limitations. Through faith, fellowship, and strategic outreach, we aim to redefine prosperity and inspire a generation to live fully in God’s abundant love and purpose.
-            </p>
-        </div>
-        <!--            <div class="column item item-process" data-aos="fade-up">-->
-        <!--                <h3 class="item-title">Teach</h3>-->
-        <!--                <p>-->
-        <!--                    We are committed to teaching the Word of God, helping others grow in their faith and understanding of the Bible.-->
-        <!--                </p>-->
-        <!--            </div>-->
-        <!--            <div class="column item item-process" data-aos="fade-up">-->
-        <!--                <h3 class="item-title">Transform</h3>-->
-        <!--                <p>-->
-        <!--                    Through God’s grace, we seek to transform lives, helping individuals and communities to experience spiritual growth and renewal.-->
-        <!--                </p>-->
-        <!--            </div>-->
-    </div>
-
-</section> <!-- end s-about -->
-
-<section id="" class="s-portfolio" style="background: #da84b1;">
-
-    <div class="row s-porfolio__top">
-
-        <div class="column large-10 -stack">
-            <h1 class="display-1" data-aos="fade-up">
-                Be Part of our growing Community
-                Join community of believers and grow
-            </h1>
-        </div>
-    </div> <!-- end s-portfolio__top-->
-
-    <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
-        <a target="_blank" href="https://chat.whatsapp.com/GEWK7wUcXcPK6CFsdTTen3" class="btn btn-dark">Join Our Community</a>
-
-    </div> <!-- folio-list -->
-
-</section> <!-- end s-portfolio -->
-
-
-<!-- services
-================================================== -->
-<section id="services" class="s-services">
-
-    <div class="row">
-        <div class="column large-12">
-            <div class="section-title" data-num="02" data-aos="fade-up">
-                <h3 class="h6">Our Events
-                </h3>
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="{{route('home')}}" class="logo">
+                        <img style="height: 60px" src="{{asset('frontend/images/logo.svg')}}" alt="Homepage">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Serach Start ***** -->
+                    <!-- ***** Serach Start ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li ><a href="{{route('home')}}" class="active">Home</a></li>
+                        <li ><a href="{{route('event')}}">Events</a></li>
+                        <li ><a href="{{route('login')}}">Login</a></li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
             </div>
         </div>
-        <div class="column large-12 w-900-stack">
-            <h1 class="display-1" data-aos="fade-up">
-                Experience engaging discussions and meaningful fellowship whether you are seeking spiritual growth, financial wisdom or physical health. This is the perfect opportunity to connect and thrive.
-            </h1>
-        </div>
-
     </div>
+</header>
+<!-- ***** Header Area End ***** -->
 
-    @if(count($events) > 0)
-        <div class="row block-large-1-2 block-tab-full s-services__services item-list">
-            @foreach($events as $event)
-                    <div class="column item item-service" data-aos="fade-up">
-                        <a href="{{route('event.detail', $event->slug)}}">
+<div class="main-banner" id="top">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="header-text">
+                    <p>
+                        Welcome to Prosperous People Ministry, where God delights in your prosperity and growth. In our community, we pray, fellowship, teach the word, and network with one another, all while embracing His promise of health and abundance. Thank you for visiting, and I look forward to connecting with you.
+                        <br><strong>(Abayomi Bello, President PPM)</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <img src="{{asset('frontend/images/bg.png')}}" alt="Prosperous People Ministry" class="banner-image">
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .main-banner {
+        background-color: #f5f5f5;
+        padding: 100px 0;
+        text-align: center;
+    }
 
-                        <span class="service-icon service-icon--community-outreach"></span>
-                        <h3 class="item-title">{{$event->title}}</h3>
-                        <img src="{{asset($event->image)}}" style="width: 100%">
-                        <p>
-                            {!! (\Illuminate\Support\Str::limit($event->body, 40, '...')) !!}                    </p>
-                        </a>
+    .main-banner .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .header-text h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .header-text p {
+        font-size: 1.125rem;
+        color: white;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    .header-text strong {
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .banner-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        .header-text h2 {
+            font-size: 2rem;
+        }
+
+        .header-text p {
+            font-size: 1rem;
+            padding-top: 70px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .main-banner {
+            padding: 40px 0;
+        }
+
+        .header-text h2 {
+            font-size: 1.75rem;
+        }
+
+        .header-text p {
+            font-size: 0.9rem;
+        }
+    }
+
+</style>
+
+<div class="services section" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="{{asset('frontend/assets/images/service-01.png')}}" alt="online degrees">
                     </div>
-            @endforeach
-            <a href="{{route('event')}}" class="btn btn-danger">View All Events</a>
-        </div>
-    @endif
+                    <div class="main-content">
+                        <h4>Mission Statement</h4>
+                        <p>At Prosperous People Ministry, our mission is to transform lives through the truth of God’s Word, empowering individuals to prosper in every area—spiritually, mentally, physically, and socially. We are dedicated to teaching the true message of prosperity and equipping believers to live victorious, abundant lives that reflect God’s goodness and grace.
 
+                        </p>
 
-</section> <!-- end s-services -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="{{asset('frontend/assets/images/service-02.png')}}" alt="short courses">
+                    </div>
+                    <div class="main-content">
+                        <h4>Vision Statement</h4>
+                        <p>We envision a community of believers who thrive in God’s promises, carrying the light of Christ across all borders and breaking through limitations. Through faith, fellowship, and strategic outreach, we aim to redefine prosperity and inspire a generation to live fully in God’s abundant love and purpose.
 
-<section id="events" class="s-portfolio" style="background: #da84b1;">
+                        </p>
 
-    <div class="row s-porfolio__top">
-        <div class="column large-6 w-900-stack">
-            <div class="section-title" data-num="03" data-aos="fade-up">
-                <h3 class="h6" style="color: black;">Inspired Articles</h3>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="column large-12 w-900-stack">
-            <h1 class="display-1" data-aos="fade-up">
-                Explore Inspiring articles that uplift and empower.</h1>
-        </div>
-    </div> <!-- end s-portfolio__top-->
+    </div>
+</div>
 
-    <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
-        <a href="" class="btn btn-dark">Explore Articles</a>
+<div class="section about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-1">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Inspired Articles
 
-    </div> <!-- folio-list -->
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Explore Inspiring articles that uplift and empower.<br/>
+                                <a href="" class="btn btn-dark">Explore Articles</a>
 
-</section> <!-- end s-portfolio -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Our Community
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Be Part of our growing Community Join community of believers and grow <br/>
+                                <a target="_blank" href="https://chat.whatsapp.com/GEWK7wUcXcPK6CFsdTTen3" class="btn btn-dark">Join Our Community</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Life Changing Teachings
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Listen to sermons that will change your life <br/>
+                                <a target="_blank" href=" https://www.youtube.com/@TheProsperousPeopleMinistry" class="btn btn-dark">Click to Watch</a>
 
 
-<!-- clients
-================================================== -->
+                            </div>
+                        </div>
+                    </div>
 
-
-<!-- contact
-================================================== -->
-<section class="s-contact">
-
-    <div class="row narrower s-contact__top h-text-center">
-        <div class="column">
-            <h3 class="h6">Get In Touch</h3>
-            <h1 class="display-1">
-                Come to Jesus
-                Accept Jesus as your personal Lord and Saviour today
-            </h1>
-        </div>
-    </div> <!-- s-contact__top -->
-
-    <div class="row h-text-center">
-        <div class="column">
-            <p class="s-contact__email">
-                <a target="_blank" href="https://forms.gle/PQovNmooa7UqggBx7">contact us</a>
-            </p>
+                </div>
+            </div>
+            <div class="col-lg-5 align-self-center">
+                <div class="section-heading">
+                    <h2>Salvation is Free</h2>
+                    <p>Come to Jesus Accept Jesus as your personal Lord and Saviour today
+                    </p>
+                    <div class="main-button">
+                        <a target="_blank" href="https://forms.gle/PQovNmooa7UqggBx7">Connect with Us</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</div>
 
-</section> <!-- end s-contact -->
-@endsection
+@if(count($events) > 0)
 
-<!-- footer
-================================================== -->
+<section class="section courses" id="courses" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-heading">
+                    <h6>Latest Events</h6>
+                </div>
+            </div>
+        </div>
+        <div class="row event_box">
+            @foreach($events as $event)
+
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+                <a href="{{route('event.detail', $event->slug)}}">
+                <div class="events_item">
+                    <div class="thumb">
+                        <img src="{{asset($event->image)}}" alt="">
+                        <span class="category">{{$event->start_date}}</span>
+                        <span class="price"><h6><em>{{$event->time}}</em></h6></span>
+                    </div>
+                    <div class="down-content">
+{{--                        <span class="author">Stella Blair</span>--}}
+                        <h4>{{$event->title}}</h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            @endforeach
+        </div>
+    </div>
+</section>
+@endif
+
+
+
+
+
+{{--<div class="contact-us section" id="contact">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row">--}}
+{{--            <div class="col-lg-6  align-self-center">--}}
+{{--                <div class="section-heading">--}}
+{{--                    <h6>Contact Us</h6>--}}
+{{--                    <h2>Feel free to contact us anytime</h2>--}}
+
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-6">--}}
+{{--                <div class="contact-us-content">--}}
+{{--                    <form id="contact-form" action="" method="post">--}}
+{{--                        <div class="row">--}}
+{{--                            <div class="col-lg-12">--}}
+{{--                                <fieldset>--}}
+{{--                                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>--}}
+{{--                                </fieldset>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-12">--}}
+{{--                                <fieldset>--}}
+{{--                                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">--}}
+{{--                                </fieldset>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-12">--}}
+{{--                                <fieldset>--}}
+{{--                                    <textarea name="message" id="message" placeholder="Your Message"></textarea>--}}
+{{--                                </fieldset>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-lg-12">--}}
+{{--                                <fieldset>--}}
+{{--                                    <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>--}}
+{{--                                </fieldset>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </form>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
+
+<footer>
+    <div class="container">
+        <div class="col-lg-12">
+            <p>Copyright @2024 Prosperous. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<!-- Bootstrap core JavaScript -->
+<script src="{{asset('frontend/vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('frontend/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/isotope.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/owl-carousel.js')}}"></script>
+<script src="{{asset('frontend/assets/js/counter.js')}}"></script>
+<script src="{{asset('frontend/assets/js/custom.js')}}"></script>
+
+</body>
+</html>
