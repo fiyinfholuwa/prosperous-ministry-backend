@@ -61,7 +61,7 @@
 
                                         <div class="col-lg-3">
                                             <label for="inputCity" class="form-label">Time</label>
-                                            <input name="text" value="{{$event->time}}"  type="time" class="form-control" placeholder="Time">
+                                            <input name="time" value="{{$event->time}}"  type="text" class="form-control" placeholder="Time">
                                         </div>
                                     </div>
 

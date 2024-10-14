@@ -60,7 +60,13 @@
                     <ul class="nav">
                         <li ><a href="{{route('home')}}" class="active">Home</a></li>
                         <li ><a href="{{route('event')}}">Events</a></li>
-                        <li ><a href="{{route('login')}}">Login</a></li>
+                        @auth
+                            <li ><a href="{{route('dashboard')}}">Dashboard</a></li>
+
+                        @else
+                            <li ><a href="{{route('login')}}">Login</a></li>
+
+                        @endauth
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -78,14 +84,14 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
                 <div class="header-text">
-                    <p>
+                    <p style="font-weight: 500 !important;">
                         Welcome to Prosperous People Ministry, where God delights in your prosperity and growth. In our community, we pray, fellowship, teach the word, and network with one another, all while embracing His promise of health and abundance. Thank you for visiting, and I look forward to connecting with you.
                         <br><strong>(Abayomi Bello, President PPM)</strong>
                     </p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
-                <img src="{{asset('frontend/images/bg.png')}}" alt="Prosperous People Ministry" class="banner-image">
+                <img src="{{asset('frontend/images/img.png')}}" alt="Prosperous People Ministry" class="banner-image">
             </div>
         </div>
     </div>
@@ -104,7 +110,7 @@
 
     .header-text h2 {
         font-size: 2.5rem;
-        font-weight: bold;
+        font-weight: 800;
         color: #333;
         margin-bottom: 20px;
     }
@@ -131,6 +137,7 @@
     @media (max-width: 768px) {
         .header-text h2 {
             font-size: 2rem;
+            font-weight: 800;
         }
 
         .header-text p {
@@ -205,7 +212,7 @@
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Explore Inspiring articles that uplift and empower.<br/>
-                                <a href="" class="btn btn-dark">Explore Articles</a>
+                                <a target="_blank" href="https://medium.com/@prosperouspeople292" class="btn btn-dark">Explore Articles</a>
 
                             </div>
                         </div>
@@ -247,7 +254,7 @@
                     <p>Come to Jesus Accept Jesus as your personal Lord and Saviour today
                     </p>
                     <div class="main-button">
-                        <a target="_blank" href="https://forms.gle/PQovNmooa7UqggBx7">Connect with Us</a>
+                        <a target="_blank" href="https://forms.gle/PQovNmooa7UqggBx7">Speak to Us</a>
                     </div>
                 </div>
             </div>

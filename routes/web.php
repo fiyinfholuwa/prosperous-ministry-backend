@@ -34,6 +34,8 @@ Route::middleware('auth')->group(function () {
         Route::post('admin/event/update/{id}', 'admin_event_update')->name('admin.event.update');
         Route::post('admin/event/delete/{id}', 'admin_event_delete')->name('admin.event.delete');
         Route::post('admin/event/report', 'admin_attendee_report')->name('admin.attendee.report');
+        Route::get('admin/change/password', 'admin_change_password')->name('admin.change.password');
+        Route::post('/user/password/change/', 'user_password_change')->name('user.password.change');
 
 
     });

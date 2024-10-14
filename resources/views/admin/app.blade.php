@@ -199,6 +199,16 @@
 
                 </li>
 
+                <li class="pc-item pc-hasmenu">
+                    <a href="{{route('admin.change.password')}}" class="pc-link">
+                        <i style="font-size: 20px;" class="ph-duotone ph-lock-key-open"></i>
+                        <span class="pc-mtext">Change Password</span>
+                        {{--                        <span class="pc-arrow"><i data-feather="chevron-right"></i></span>--}}
+                        {{--                        <span class="pc-badge">2</span>--}}
+                    </a>
+
+                </li>
+
 
 
                 <li class="pc-item pc-hasmenu">
