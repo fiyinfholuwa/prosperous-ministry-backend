@@ -9,6 +9,8 @@
     <title>Prosperous Ministry</title>
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon"  sizes="196x196" href="{{ asset('frontend/images/logo.svg') }}" type="image/svg+xml">
+    <link rel="icon" sizes="196x196" href="{{ asset('frontend/images/logo.png') }}" type="image/png">
 
     <!-- mobile specific metas
     ================================================== -->
@@ -26,9 +28,6 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('frontend/images/logo.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('frontend/images/logo.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('frontend/images/logo.png')}}">
 
 
 </head>
