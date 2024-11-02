@@ -12,6 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link href="{{asset('frontend/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
+    <link rel="icon" href="{{ asset('frontend/images/logo.png') }}" type="image/png">
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/fontawesome.css')}}">

@@ -6,11 +6,11 @@
 
 <!-- Mirrored from ableproadmin.com/pages/login-v1.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 18:22:03 GMT -->
 <head>
-    <title>AUTRIS Healthcare - Login</title>
+    <title>Prosperous Ministry - Login</title>
     <!-- [Meta] -->
     <meta charset="utf-8">
     <!-- [Favicon] icon -->
-    <link rel="icon" href="{{asset('backend/logo.svg')}}" type="image/x-icon"> <!-- [Font] Family -->
+    <link rel="icon" href="{{ asset('frontend/images/logo.png') }}" type="image/png">
     <link rel="stylesheet" href="{{asset('backend/assets/fonts/inter/inter.css')}}" id="main-font-link" />
     <!-- [Tabler Icons] https://tablericons.com -->
     <link rel="stylesheet" href="{{asset('backend/assets/fonts/tabler-icons.min.css')}}" >

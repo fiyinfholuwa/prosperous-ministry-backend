@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html  lang="en">
 <head>
 
     <!--- basic page needs
@@ -9,8 +9,9 @@
     <title>Prosperous Ministry</title>
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon"  sizes="196x196" href="{{ asset('frontend/images/logo.svg') }}" type="image/svg+xml">
-    <link rel="icon" sizes="196x196" href="{{ asset('frontend/images/logo.png') }}" type="image/png">
+{{--    <link rel="icon" href="{{ asset('frontend/images/favicon.ico') }}" type="image/x-icon">--}}
+    <link rel="icon" href="{{ asset('frontend/images/logo.png') }}" type="image/png">
+{{--    <link rel="icon" sizes="196x196" href="{{ asset('frontend/images/logo.svg') }}" type="image/svg+xml">--}}
 
     <!-- mobile specific metas
     ================================================== -->
@@ -80,25 +81,19 @@
 
 
 
-<footer class="s-footer">
+<footer class="s-footer" style="margin-top: auto; background-color: #333; color: #fff; padding: 20px; position: sticky; bottom: 0; width: 100%;">
     <div class="row row-y-top">
-
-
         <div class="column large-4 medium-12 s-footer__block--end">
-            <a href="https://chat.whatsapp.com/GEWK7wUcXcPK6CFsdTTen3" class="btn h-full-width">Let's Connect</a>
+            <a href="https://chat.whatsapp.com/GEWK7wUcXcPK6CFsdTTen3" class="btn h-full-width" style="display: block; width: 100%; text-align: center; background-color: #0066cc; color: #fff; padding: 10px; text-decoration: none;">Let's Connect</a>
 
-            <div class="ss-copyright">
+            <div class="ss-copyright" style="text-align: center; margin-top: 10px;">
                 <span>Copyright Prosperous Ministry 2024</span>
-                <!--                    <span>Designed by <a href="https://www.styleshout.com/">StyleShout</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a></span>-->
             </div>
         </div>
 
-        <div class="ss-go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top">
-                top
-            </a>
-        </div> <!-- end ss-go-top -->
-
+        <div class="ss-go-top" style="text-align: center; margin-top: 20px;">
+            <a class="smoothscroll" title="Back to Top" href="#top" style="color: #fff; text-decoration: none;">top</a>
+        </div>
     </div>
 </footer>
 
@@ -173,3 +168,26 @@
 </body>
 
 </html>
+
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .s-footer {
+        margin-top: auto;
+        background-color: #333; /* Customize as needed */
+        color: #fff; /* Customize as needed */
+        padding: 20px; /* Customize as needed */
+    }
+
+</style>
