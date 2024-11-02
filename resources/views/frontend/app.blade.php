@@ -36,8 +36,7 @@
 <body id="top">
 
 
-<!-- preloader
-================================================== -->
+<!-- preloader================================================== -->
 <div id="preloader">
     <div id="loader" class="dots-fade">
         <div></div>
@@ -47,8 +46,9 @@
 </div>
 
 
-<!-- header
-================================================== -->
+
+<!-- header================================================== -->
+
 <header class="s-header">
 
     <div class="s-header__logo">
@@ -76,12 +76,13 @@
 
     <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
 
-</header> <!-- end s-header -->
+</header>
+<!-- end s-header -->
 @yield('content')
 
 
 
-<footer class="s-footer" style="margin-top: auto; background-color: #333; color: #fff; padding: 20px; position: sticky; bottom: 0; width: 100%;">
+<footer class="s-footer" style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #333; color: #fff; padding: 20px; box-sizing: border-box;">
     <div class="row row-y-top">
         <div class="column large-4 medium-12 s-footer__block--end">
             <a href="https://chat.whatsapp.com/GEWK7wUcXcPK6CFsdTTen3" class="btn h-full-width" style="display: block; width: 100%; text-align: center; background-color: #0066cc; color: #fff; padding: 10px; text-decoration: none;">Let's Connect</a>
